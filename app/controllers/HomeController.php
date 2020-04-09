@@ -11,6 +11,6 @@ class HomeController
      */
     public function index()
     {
-        return View::get('frontend/index');
+        return View::get('index');
     }
 }

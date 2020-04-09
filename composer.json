@@ -33,9 +33,9 @@
     ],
     "files": [
       "kernel/helpers.php",
-      "config/routes.php",
-      "config/database.php",
-      "config/application.php"
+      "app/routes.php",
+      "app/config/database.php",
+      "app/config/application.php"
     ]
   }
 }

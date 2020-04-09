@@ -8,6 +8,8 @@
  */
 
 get('welcome -> /welcome', '/cms/WelcomeController@index');
+get('/blog', 'HomeController@index');
+get('/blog/:any/:any', 'HomeController@index');
 
 
 
