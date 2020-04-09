@@ -516,6 +516,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   data: function data() {
@@ -604,7 +605,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.app[data-v-b8fe0bae] {\n    font-family: 'Roboto', sans-serif;\n    color: #777777\n}\n.wrap[data-v-b8fe0bae] {\n    margin-top: 20%;\n    text-align: center;\n}\n.navbar .dropdown-menu[data-v-b8fe0bae] {\n    background: #272727;\n    margin-top: 8px;\n    border: none;\n    padding: 10px 0;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae] {\n    color: #ffffff;\n    padding: 10px 30px;\n    transition: .4s;\n    border-bottom: 1px solid #171717\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:last-child {\n    border: none;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:hover {\n    background: #171717;\n}\n\n", ""]);
+exports.push([module.i, "\n.app[data-v-b8fe0bae] {\n    font-family: 'Roboto', sans-serif;\n    color: #777777\n}\n.wrap[data-v-b8fe0bae] {\n    margin-top: 20%;\n    text-align: center;\n}\n.navbar .dropdown-menu[data-v-b8fe0bae] {\n    background: #272727;\n    margin-top: 8px;\n    border: none;\n    padding: 10px 0;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae] {\n    color: #ffffff;\n    padding: 10px 30px;\n    transition: .4s;\n    border-bottom: 1px solid #171717\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:last-child {\n    border: none;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:hover {\n    background: #171717;\n}\n.plus[data-v-b8fe0bae] {\n    font-size: 30px\n}\n\n", ""]);
 
 // exports
 
@@ -1855,9 +1856,11 @@ var render = function() {
         "div",
         { staticClass: "wrap" },
         [
-          _c("img", {
-            attrs: { src: "/assets/img/strife.png", height: "100" }
-          }),
+          _c("img", { attrs: { src: "/assets/img/strife.png", height: "80" } }),
+          _vm._v(" "),
+          _c("span", { staticClass: "plus" }, [_vm._v("+")]),
+          _vm._v(" "),
+          _c("img", { attrs: { src: "/assets/img/vue.png", height: "80" } }),
           _vm._v(" "),
           _c("router-view")
         ],

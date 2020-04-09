@@ -34,7 +34,8 @@
 
         <div class="container">
             <div class="wrap">
-                <img src="/assets/img/strife.png" height="100">
+                <img src="/assets/img/strife.png" height="80"> <span class="plus">+</span>
+                <img src="/assets/img/vue.png" height="80">
                 <!-- views insert here -->
                 <router-view></router-view>
             </div>
@@ -89,6 +90,10 @@
 
     .navbar .dropdown-menu .dropdown-item:hover {
         background: #171717;
+    }
+
+    .plus {
+        font-size: 30px
     }
 
 </style>
