@@ -486,8 +486,44 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App"
+  name: "App",
+  data: function data() {
+    return {
+      dropdown: false,
+      navbar: false
+    };
+  }
 });
 
 /***/ }),
@@ -508,7 +544,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "App"
+  name: "Blog"
 });
 
 /***/ }),
@@ -568,7 +604,7 @@ exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader
 
 
 // module
-exports.push([module.i, "\n.template[data-v-b8fe0bae] {\n    margin-top: 50px;\n    text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n.app[data-v-b8fe0bae] {\n    font-family: 'Roboto', sans-serif;\n    color: #777777\n}\n.wrap[data-v-b8fe0bae] {\n    margin-top: 20%;\n    text-align: center;\n}\n.navbar .dropdown-menu[data-v-b8fe0bae] {\n    background: #272727;\n    margin-top: 8px;\n    border: none;\n    padding: 10px 0;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae] {\n    color: #ffffff;\n    padding: 10px 30px;\n    transition: .4s;\n    border-bottom: 1px solid #171717\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:last-child {\n    border: none;\n}\n.navbar .dropdown-menu .dropdown-item[data-v-b8fe0bae]:hover {\n    background: #171717;\n}\n\n", ""]);
 
 // exports
 
@@ -1684,48 +1720,149 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "template" }, [
-      _c("img", { attrs: { src: "/assets/img/strife.png", height: "100" } }),
-      _vm._v(" "),
-      _c("h3", [_vm._v("Welcome to Strife-Vue Template!")]),
-      _vm._v(" "),
-      _c("ul", { staticClass: "list-inline" }, [
+  return _c("div", { staticClass: "app" }, [
+    _c(
+      "nav",
+      { staticClass: "navbar navbar-expand-lg navbar-dark bg-primary" },
+      [
         _c(
-          "li",
+          "div",
+          { staticClass: "container" },
           [
-            _c("router-link", {
-              attrs: { to: "/" },
-              domProps: { textContent: _vm._s("Home") }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          [
-            _c("router-link", {
-              attrs: { to: "/blog" },
-              domProps: { textContent: _vm._s("Blog") }
-            })
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "li",
-          [
-            _c("router-link", {
-              attrs: { to: "/blog/2020/This is a sample post" },
-              domProps: { textContent: _vm._s("View Post") }
-            })
+            _c(
+              "router-link",
+              { staticClass: "navbar-brand", attrs: { to: "/" } },
+              [
+                _c("img", {
+                  attrs: { src: "/assets/img/strife.png", height: "30" }
+                })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "navbar-toggler",
+                on: {
+                  click: function($event) {
+                    _vm.navbar = !_vm.navbar
+                  }
+                }
+              },
+              [_c("span", { staticClass: "navbar-toggler-icon" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "collapse navbar-collapse",
+                class: { show: _vm.navbar },
+                attrs: { id: "navbarNavDropdown" }
+              },
+              [
+                _c("ul", { staticClass: "navbar-nav" }, [
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c("router-link", {
+                        staticClass: "nav-link",
+                        attrs: { to: "/blog" },
+                        domProps: { textContent: _vm._s("Blog") }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "li",
+                    { staticClass: "nav-item" },
+                    [
+                      _c("router-link", {
+                        staticClass: "nav-link",
+                        attrs: { to: "/blog/2020/This is a blog post" },
+                        domProps: { textContent: _vm._s("Post") }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("li", { staticClass: "nav-item dropdown" }, [
+                    _c(
+                      "span",
+                      {
+                        staticClass: "nav-link dropdown-toggle",
+                        on: {
+                          click: function($event) {
+                            _vm.dropdown = !_vm.dropdown
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Dropdown link\n                        "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "dropdown-menu",
+                        class: { show: _vm.dropdown }
+                      },
+                      [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "dropdown-item",
+                            attrs: { href: "#" }
+                          },
+                          [_vm._v("Action")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "dropdown-item",
+                            attrs: { href: "#" }
+                          },
+                          [_vm._v("Another action")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "dropdown-item",
+                            attrs: { href: "#" }
+                          },
+                          [_vm._v("Something else here")]
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            )
           ],
           1
         )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "well" }, [_c("router-view")], 1)
+      ]
+    ),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _c(
+        "div",
+        { staticClass: "wrap" },
+        [
+          _c("img", {
+            attrs: { src: "/assets/img/strife.png", height: "100" }
+          }),
+          _vm._v(" "),
+          _c("router-view")
+        ],
+        1
+      )
     ])
   ])
 }
