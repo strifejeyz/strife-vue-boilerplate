@@ -16,6 +16,9 @@
                         <li class="nav-item">
                             <router-link class="nav-link" v-text="'Post'" to="/blog/2020/This is a blog post"/>
                         </li>
+                        <li class="nav-item">
+                            <router-link class="nav-link" v-text="'Users'" to="/users"/>
+                        </li>
                         <li class="nav-item dropdown">
                             <span class="nav-link dropdown-toggle" @click="dropdown = !dropdown">
                                 Dropdown link
@@ -34,8 +37,6 @@
 
         <div class="container">
             <div class="wrap">
-                <img src="/assets/img/strife.png" height="80"> <span class="plus">+</span>
-                <img src="/assets/img/vue.png" height="80">
                 <!-- views insert here -->
                 <router-view></router-view>
             </div>
