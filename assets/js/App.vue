@@ -14,9 +14,6 @@
                             <router-link class="nav-link" v-text="'Blog'" to="/blog"/>
                         </li>
                         <li class="nav-item">
-                            <router-link class="nav-link" v-text="'Post'" to="/blog/2020/This is a blog post"/>
-                        </li>
-                        <li class="nav-item">
                             <router-link class="nav-link" v-text="'Users'" to="/users"/>
                         </li>
                         <li class="nav-item dropdown">
@@ -42,8 +39,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 </template>
