@@ -18,7 +18,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <span class="nav-link dropdown-toggle" @click="dropdown = !dropdown">
-                                Dropdown link
+                                Dropdown
                             </span>
                             <div class="dropdown-menu" :class="{'show':dropdown}">
                                 <a class="dropdown-item" href="#">Action</a>

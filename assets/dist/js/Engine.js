@@ -2621,6 +2621,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App"
 });
@@ -4822,7 +4838,7 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n                            Dropdown link\n                        "
+                          "\n                            Dropdown\n                        "
                         )
                       ]
                     ),
@@ -4952,7 +4968,33 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("This is homepage")])])
+    return _c("div", [
+      _c("h1", [_vm._v("Dev Template 0.1.2")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-4 offset-md-4" }, [
+          _c("div", { staticClass: "panel bg-light shadow" }, [
+            _c("ul", { staticClass: "text-left" }, [
+              _c("li", [_vm._v("Strife Framework")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Vuejs")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Vuex")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("VueRouter")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Laravel-mix")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Cross-env")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Axios")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Bootstrap 4")])
+            ])
+          ])
+        ])
+      ])
+    ])
   }
 ]
 render._withStripped = true
