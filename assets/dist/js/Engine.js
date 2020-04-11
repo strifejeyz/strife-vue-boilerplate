@@ -2589,6 +2589,15 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2823,7 +2832,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.post[data-v-6784b06a] {\n    text-align: left;\n}\n", ""]);
+exports.push([module.i, "\n.post[data-v-6784b06a] {\n    text-align: left;\n}\n.sidebar[data-v-6784b06a] {\n    font-size: 14px;\n    text-align: left\n}\n", ""]);
 
 // exports
 
@@ -4915,29 +4924,58 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h1", [_vm._v("This is Blog page")]),
+  return _c("div", [
+    _c("h1", [_vm._v("This is Blog page")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c(
+        "div",
+        { staticClass: "col-md-8" },
+        _vm._l(_vm.Posts, function(post) {
+          return _c("div", { key: post.id, staticClass: "post" }, [
+            _c(
+              "h3",
+              [
+                _c("router-link", { attrs: { to: "/blog/2020/" + post.id } }, [
+                  _vm._v(_vm._s(post.title))
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c("p", { staticClass: "content" }, [_vm._v(_vm._s(post.body))])
+          ])
+        }),
+        0
+      ),
       _vm._v(" "),
-      _vm._l(_vm.Posts, function(post) {
-        return _c("div", { key: post.id, staticClass: "post" }, [
-          _c(
-            "h3",
+      _c(
+        "div",
+        { staticClass: "col-md-4" },
+        _vm._l(10, function(i) {
+          return _c(
+            "div",
+            { key: i, staticClass: "sidebar" },
             [
-              _c("router-link", { attrs: { to: "/blog/2020/" + post.id } }, [
-                _vm._v(_vm._s(post.title))
-              ])
+              _c(
+                "router-link",
+                { attrs: { to: "/blog/2020/" + _vm.Posts[i - 1].id } },
+                [
+                  _vm._v(
+                    _vm._s(_vm.Posts[i - 1].id) +
+                      ". " +
+                      _vm._s(_vm.Posts[i - 1].title)
+                  )
+                ]
+              )
             ],
             1
-          ),
-          _vm._v(" "),
-          _c("p", { staticClass: "content" }, [_vm._v(_vm._s(post.body))])
-        ])
-      })
-    ],
-    2
-  )
+          )
+        }),
+        0
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
